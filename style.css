@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   overflow-x: hidden;
 }
 
@@ -53,7 +53,7 @@ main {
 }
 
 .bg-image {
-  background: url('./Images/Space1.jpg');
+  background: url("./Images/Space1.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -92,7 +92,7 @@ main {
   border: 3px solid white;
   border-radius: 0.6rem;
   color: white;
-  transition:  all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .buttons-section button:hover {
@@ -101,6 +101,7 @@ main {
 }
 
 .screenshots-section {
+  position: relative;
   width: 100vw;
   height: auto;
   display: flex;
@@ -122,7 +123,8 @@ main {
   margin: 0vh 20vh;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -141,8 +143,8 @@ main {
   border-radius: 3px 0 0 3px;
 }
 
-
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -154,17 +156,25 @@ main {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .screenshot-image {
-  width:100%;
+  width: 100%;
 }
 
 .screenshots-and-specialities {
@@ -183,7 +193,8 @@ main {
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
-  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 1px #000000, 0 0 4px #ffffff, 0 0 5px #000000, 0 0 60px #ffffff, 0 0 7px #000000;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 1px #000000, 0 0 4px #ffffff,
+    0 0 5px #000000, 0 0 60px #ffffff, 0 0 7px #000000;
 }
 
 .screenshot-info {
@@ -197,13 +208,13 @@ main {
 }
 
 .custom-shape-divider-top-1629821686 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    background: #242532;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background: #242532;
 }
 
 .downloads-section {
@@ -234,7 +245,8 @@ main {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #ccc;
 }
 
@@ -257,3 +269,189 @@ main {
   text-decoration: none;
 }
 
+.maintainer-section {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    rgb(221, 221, 221),
+    rgb(143, 143, 143)
+  );
+  z-index: 1;
+}
+
+.bubble {
+  width: 17vh;
+  height: 17vh;
+  border-radius: 50%;
+  background: linear-gradient(to left top, rgb(3, 240, 248), rgb(79, 248, 0));
+  position: absolute;
+  top: -10vh;
+  left: -5vh;
+  z-index: -4;
+}
+
+.container {
+  width: 100%;
+  min-height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(
+    to right bottom,
+    rgba(250, 250, 250, 0.2),
+    rgba(201, 201, 201, 0.5)
+  );
+  box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+  position: relative;
+  width: 35vw;
+  padding: 10px;
+  margin: 0vh 5vh;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 5rem;
+  height: 30vh;
+  backdrop-filter: blur(4px) saturate(100%) contrast(45%) brightness(130%);
+  z-index: 2;
+}
+
+.card-first-section {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.social-icons a {
+  background: #ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+}
+
+.social-icons a i {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+
+.social-icons a.github i {
+  color: #808080;
+}
+
+.social-icons a.telegram i {
+  color: #1da1f2;
+}
+
+.icon {
+  font-size: 17px;
+  color: #31344b;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.7;
+  top: 15px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.icon i {
+  position: relative;
+  z-index: 9;
+}
+
+.img-area {
+  width: 120px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+  z-index: 3;
+}
+
+.inner-area img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #31344b;
+  margin: 10px 0 5px 0;
+}
+
+.about {
+  color: #44476a;
+  font-weight: 400;
+  font-size: 14px;
+}
+.social-icons {
+  margin: 1vh 0vh;
+  margin-left: 8vh;
+}
+
+.social-icons a {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.social-icons a:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  background: #ecf0f3;
+  box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
+}
+
+.social-icons a i {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+
+.social-icons a.twitter i {
+  color: #1da1f2;
+}
+
+.social-icons a.github i {
+  color: #808080;
+}
+
+.social-icons a.telegram i {
+  color: #1da1f2;
+}
+
+#wave {
+  margin-bottom: -38vh;
+  z-index: 0;
+}
