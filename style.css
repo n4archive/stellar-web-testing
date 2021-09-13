@@ -323,8 +323,8 @@ main {
 .card {
   background: linear-gradient(
     to right bottom,
-    rgba(250, 250, 250, 0.2),
-    rgba(201, 201, 201, 0.5)
+    rgba(250, 250, 250, 0.3),
+    rgba(201, 201, 201, 0.7)
   );
   box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
   position: relative;
@@ -338,7 +338,7 @@ main {
   flex-direction: column;
   margin-top: 5rem;
   height: 30vh;
-  backdrop-filter: blur(4px) saturate(100%) contrast(45%) brightness(130%);
+  backdrop-filter: blur(14px) saturate(100%) contrast(45%) brightness(130%);
   z-index: 2;
 }
 
@@ -472,4 +472,85 @@ main {
 #wave {
   margin-bottom: -38vh;
   z-index: 0;
+}
+
+.Downloads {
+  position: absolute;
+  top: 0vh;
+  background: #242532;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.back {
+  position: absolute;
+  top: 3vh;
+  left: 5vh;
+  height: 7vh;
+  width: 7vh;
+  background: rgba(161, 161, 161, 0.336);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+}
+
+.back i {
+  font-size: 2rem;
+  color: rgb(248, 248, 248);
+}
+
+.downloads-head {
+  position: absolute;
+  top: 6vh;
+  width: 100vw;
+  height: auto;
+  font-style: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.Downloads-container {
+  width: 100vw;
+  min-height: 85vh;
+  position: relative;
+  top: 15vh;
+  background-color: 242532;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.downloads-card {
+  width: 37vw;
+  height: 27vh;
+  margin: 5vh 0vh;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.76),
+    rgba(209, 209, 209, 0.397)
+  );
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.8);
+}
+
+.downloads-card h1 {
+  font-size: 1.5em;
+  margin-bottom: -3vh;
+}
+
+.downloads-card button {
+  border-radius: 0.4rem;
+  background: rgb(216, 216, 216);
+  border: none;
+  padding: 0.6rem 2rem;
+  cursor: pointer;
 }
