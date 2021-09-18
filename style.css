@@ -339,7 +339,6 @@ main {
 
 .container {
   width: 100%;
-  min-height: 120vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -503,7 +502,7 @@ main {
 }
 
 #wave {
-  margin-bottom: -37vh;
+  margin-bottom: -100px;
   z-index: 0;
 }
 
