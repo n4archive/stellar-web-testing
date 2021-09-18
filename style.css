@@ -24,8 +24,8 @@ nav {
 
 .logo {
   color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 2.9rem;
+  font-weight: 800;
   z-index: 4;
 }
 
@@ -40,7 +40,7 @@ nav {
 }
 
 .nav-links li {
-  font-size: 15px;
+  font-size: 18px;
   color: white;
 }
 
@@ -61,6 +61,17 @@ main {
   height: 100vh;
 }
 
+.background-blend {
+  position: absolute;
+  top: 0vh;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(0, 0, 0);
+  z-index: 2;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .bg-image {
   background: url("./Images/Space1.jpg");
   background-attachment: fixed;
@@ -74,11 +85,13 @@ main {
   justify-content: center;
   flex-direction: column;
   color: white;
+  position: relative;
 }
 
 .bg-image h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   color: white;
+  z-index: 3;
 }
 
 .bg-image p {
@@ -86,6 +99,7 @@ main {
   width: 60%;
   line-height: 1.5rem;
   margin: 2rem 0rem;
+  z-index: 3;
 }
 
 .buttons-section {
@@ -300,6 +314,12 @@ main {
   z-index: 1;
 }
 
+.maintainer-section .main-head {
+  background: #242532;
+  text-align: center;
+  color: white;
+}
+
 .bubble {
   width: 17vh;
   height: 17vh;
@@ -340,6 +360,13 @@ main {
   height: 30vh;
   backdrop-filter: blur(14px) saturate(100%) contrast(45%) brightness(130%);
   z-index: 2;
+  padding: 1.4rem 0rem;
+}
+
+.maintainership {
+  width: 100vw;
+  height: auto;
+  text-align: center;
 }
 
 .card-first-section {
@@ -524,8 +551,9 @@ main {
 
 .downloads-card {
   width: 37vw;
-  height: 27vh;
+  height: 30vh;
   margin: 5vh 0vh;
+  padding: 1rem 0rem;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.76),
@@ -544,13 +572,134 @@ main {
 
 .downloads-card h1 {
   font-size: 1.5em;
-  margin-bottom: -3vh;
 }
 
 .downloads-card button {
   border-radius: 0.4rem;
-  background: rgb(216, 216, 216);
+  background: rgb(172, 172, 172);
   border: none;
   padding: 0.6rem 2rem;
   cursor: pointer;
+}
+
+.slider {
+  position: fixed;
+  top: 0vh;
+  left: 0vh;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(255, 97, 97);
+  transition: clip-path 500ms ease;
+  z-index: 1;
+  transform: translateX(-100vw);
+  transition: transform 400ms ease-out;
+}
+
+.slider1 {
+  position: fixed;
+  top: 0vh;
+  left: 0vh;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(255, 97, 97);
+  transition: clip-path 500ms ease;
+  z-index: 1;
+  transform: translateX(100vw);
+  transition: transform 400ms ease-out;
+}
+
+.downloads-card-first-section {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.device-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 80%;
+  color: rgb(59, 59, 59);
+  margin-right: 6vh;
+}
+
+.device-info a {
+  text-decoration: none;
+  color: rgb(59, 59, 59);
+}
+
+.device-image img {
+  width: 130px;
+  margin-top: 4vh;
+}
+
+.cycler {
+  position: fixed;
+  top: 0vh;
+  left: 0vh;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0vh;
+  left: 0vh;
+  background: rgb(255, 255, 255);
+  z-index: 10;
+  display: none;
+}
+
+.img svg {
+  animation: svg 500ms ease infinite alternate;
+}
+
+@media (max-width: 700px) {
+  body {
+    overflow: hidden;
+  }
+  .background-blend {
+    background: black;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0ch;
+    left: 0vh;
+  }
+  .cover {
+    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .img {
+    width: 80%;
+    margin: 5vh 0vh;
+  }
+  .img svg {
+    width: 100%;
+    height: 90%;
+  }
+  .cover h3 {
+    width: 85%;
+    line-height: 1.7rem;
+    color: gray;
+  }
+}
+
+@keyframes svg {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }

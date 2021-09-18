@@ -45,24 +45,9 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// const bubbles = document.getElementsByClassName("bubble");
+const backButton = document.querySelector(".back-button");
+const slider = document.querySelector(".slider1");
 
-// var winWidth = window.innerWidth;
-// var winHeight = window.innerHeight;
-
-// for (var i = 0; i < bubbles.length; i++) {
-//   // shortcut! the current div in the list
-//   var thisDiv = bubbles[i];
-
-//   randomTop = getRandomNumber(0, winHeight);
-//   randomLeft = getRandomNumber(0, winWidth);
-
-//   // update top and left position
-
-//   thisDiv.style.top = randomTop + "px";
-//   thisDiv.style.left = randomLeft + "px";
-// }
-
-// function getRandomNumber(min, max) {
-//   return Math.random() * (max - min) + min;
-// }
+backButton.addEventListener("click", (e) => {
+  slider.style.transform = "translateX(0)";
+});
